@@ -1,0 +1,15 @@
+{
+    "private": true,
+    "scripts": {
+      "app": "pnpm --filter ws-al-app",
+      "lib": "pnpm --filter ws-al-lib",
+      "preview": "pnpm app build && npx serve ./packages/app/dist",
+      "postinstall": "pnpm lib build"
+    },
+    "pnpm": {
+      "overrides": {
+        "ws-al-lib": "workspace:*"
+      }
+    }
+  }
+  
